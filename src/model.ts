@@ -62,8 +62,7 @@ export class Cat {
       query.patterns.some((pattern) => pattern.toLowerCase().includes(ALL))
     ) {
       similarity += 1;
-    }
-    if (
+    } else if (
       query.patterns &&
       this._pattern &&
       query.patterns.some((pattern) => pattern === this._pattern)
@@ -86,6 +85,11 @@ export class Cat {
 
     // If there is a match between coat, we can give some similarity
     if (
+      query.coats &&
+      query.coats.some((coat) => coat.toLowerCase().includes(ALL))
+    ) {
+      similarity += 1;
+    } else if (
       query.coats &&
       this._coat &&
       query.coats.some((coat) => coat === this._coat)
