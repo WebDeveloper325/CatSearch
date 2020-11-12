@@ -7,7 +7,9 @@
 # Here is the sample search query
 
 You can use Postman to find the cats
+
 Example Query:
+
 http://localhost:8000/cats?breed=Lykoi&patterns[]=Ticked&countries[]=France&origin=Hybrid&coats[]=Short&offset=0&limit=2
 
 Query Params
@@ -35,10 +37,13 @@ If the countries, patterns, coats is set as `All` in the query, then we will giv
 # Missing points that I haven't implemented
 
 When I looked over the data rougly, I thought the country in the json is a country name.
+
 But I found that it could become the description or explanation of the cat.
+
 So I definitely agree that in the query, we need to set the countries as `string` rather than `string[]`
 
 Thanks,
+
 Please let me know if you have other questions.
 
 James Conway
