@@ -6,6 +6,9 @@ export type Countries = string[];
 // TODO: We can have list of patterns or define them ourselves
 export type Patterns = string[];
 
+// TODO: We can have the specific coat type
+export type Coats = string[];
+
 /**
  * Cat Interface that shows which attributes cat can have
  */
@@ -24,7 +27,7 @@ export interface CatQueryInterface {
   breed?: string;
   countries?: Countries;
   origin?: string;
-  coat?: string;
+  coats?: Coats;
   patterns?: Patterns;
   offset?: number;
   limit?: number;

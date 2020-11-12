@@ -84,17 +84,13 @@ export class Cat {
       }
     }
 
-    // If there is a match between coat, we can give some priority
+    // If there is a match between coat, we can give some similarity
     if (
-      query.coat &&
+      query.coats &&
       this._coat &&
-      this._coat.toLowerCase().includes(query.coat.toLowerCase())
+      query.coats.some((coat) => coat === this._coat)
     ) {
       similarity += 2;
-      // If the coat is good match, then we can give more priority
-      if (this._coat === query.coat) {
-        similarity += 2;
-      }
     }
     return similarity;
   }
